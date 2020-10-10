@@ -10,7 +10,7 @@ var app = new Vue({
       {
         title: "Er...",
         subtitle: "I want to reach out to Lecturers",
-        url: "#",
+        url: "https://forms.gle/cMdkuiDGNLx7zGvf7",
       },
     ],
   },
