@@ -10,13 +10,17 @@ var app = new Vue({
       {
         title: "Er...",
         subtitle: "I want to reach out to Lecturers",
-        url: "https://forms.gle/gRukE9R5NPSE3Zej6",
+        url: "#",
       },
     ],
   },
   methods: {
     goTo: function (card) {
-      window.location.href = card.url;
+      if (card.url == "#") {
+        window.alert("Not implemented yet!");
+      } else {
+        window.location.href = card.url;
+      }
     },
   },
 });
