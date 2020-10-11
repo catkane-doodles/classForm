@@ -27,36 +27,44 @@
           <div class="columns" id="cards">
             <div class="column" v-for="card in cards">
               <div class="card" v-on:click="goTo(card)">
-              <div class="card-content">
-                <p class="title">{{ card.title }}</p>
-                <p class="subtitle">{{ card.subtitle }}</p>
-                <p class="url" v-if="card.seen">{{card.url}}</p>
+                <div class="card-content">
+                  <p class="title">{{ card.title }}</p>
+                  <p class="subtitle">{{ card.subtitle }}</p>
+                  <p class="url" v-if="card.seen">{{card.url}}</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="columns is-centered "id="misc">
-          <div class="column" v-for="tab in tabs">
-            <div class="card" v-on:click="expand(tab)">
-            <div class="card-content">
-              <p class="title">{{ tab.title }}</p>
-              <div class="columns is-centered has-text-left" v-if="tab.seen == 1">
-                <div class="column m-2">
-                <ol>
-                  <li v-for="point in tab.points" class="content"> {{point.title}} 
-                    <ul>
-                      <p v-for="line in point.content"> {{line}}</p>
-                    </ul>
-                  </li>
-                </ol></div>
+          <div class="columns is-centered "id="misc">
+            <div class="column" v-for="tab in tabs">
+              <div class="card" v-on:click="expand(tab)">
+                <div class="card-content">
+                  <p class="title">{{ tab.title }}</p>
+                  <div class="columns is-centered has-text-left" v-if="tab.seen == 1">
+                    <div class="column m-2">
+                      <ol>
+                        <li v-for="point in tab.points" class="content"> {{point.title}} 
+                          <ul>
+                            <p v-for="line in point.content"> {{line}}</p>
+                          </ul>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
+      <div class="hero-foot">
+        <div class="content has-text-centered">
+          <p>
+            <strong>FreeDNS</strong> by <a href="https://freedns.afraid.org/">Josh</a>. The source code is licensed
+            <a href="https://opensource.org/licenses/gpl-2.0.php">GPL-2.0</a>.
+          </p>
+        </div>
       </div>
     </section>
     <script

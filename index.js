@@ -3,14 +3,16 @@ const mainCards = new Vue({
   data: {
     cards: [
       {
-        title: "PSD TP Questions",
+        title: "I have a question for other modules!",
         subtitle: "For all your enquiries to other TP modules",
-        url: "https://forms.gle/gRukE9R5NPSE3Zej6",
+        url:
+          "https://docs.google.com/forms/d/e/1FAIpQLScRepQMNs4Akr-rMadCT9dQk4Jqgt_XK0xRMGXp5rMFh61wAg/viewform?usp=sf_link",
       },
       {
-        title: "Er...",
+        title: "Er... What was that lecture about?",
         subtitle: "I want to reach out to Lecturers",
-        url: "https://forms.gle/cMdkuiDGNLx7zGvf7",
+        url:
+          "https://docs.google.com/forms/d/e/1FAIpQLSc1-KWztS7kopod1hrC62_q8fJivwii4STqc6X6JzZ1mSJ93A/viewform?usp=sf_link",
       },
     ],
   },
@@ -19,6 +21,7 @@ const mainCards = new Vue({
       if (card.url == "#") {
         window.alert("Not implemented yet!");
       } else {
+        this.loading = true;
         location.href = card.url;
       }
     },
