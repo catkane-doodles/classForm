@@ -11,7 +11,7 @@
     <link rel="icon" type="ico" href="favicon.ico"/>
   </head>
   <body>
-    <section class="hero is-light is-fullheight">
+    <section class="hero is-warning is-fullheight">
       <div class="hero-body">
         <div class="container has-text-centered">
           <div class="columns is-centered">
@@ -32,9 +32,30 @@
                 <p class="subtitle">{{ card.subtitle }}</p>
               </div>
             </div>
-
           </div>
         </div>
+
+        <div class="columns is-centered"id="misc">
+          <div class="column" v-for="tab in tabs">
+            <div class = "card" v-on:click="expand(tab)">
+            <div class="card-content">
+              <p class="title">{{ tab.title }}</p>
+              <div class="columns is-centered has-text-left" v-if="tab.seen == 1">
+                <div class="column m-2">
+                <ol>
+                  <li v-for="point in tab.points" class="content"> {{point.title}} 
+                    <ul>
+                      <p v-for="line in point.content"> {{line}}</p>
+                    </ul>
+                  </li>
+                </ol></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       </div>
     </section>
 
