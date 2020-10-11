@@ -19,7 +19,7 @@ const mainCards = new Vue({
       if (card.url == "#") {
         window.alert("Not implemented yet!");
       } else {
-        window.location.href = card.url;
+        location.href = card.url;
       }
     },
   },

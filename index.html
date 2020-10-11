@@ -24,20 +24,21 @@
             </div>
           </div>
 
-          <div class="columns"id="cards">
+          <div class="columns" id="cards">
             <div class="column" v-for="card in cards">
-              <div class = "card" v-on:click="goTo(card)">
+              <div class="card" v-on:click="goTo(card)">
               <div class="card-content">
                 <p class="title">{{ card.title }}</p>
                 <p class="subtitle">{{ card.subtitle }}</p>
+                <p class="url" v-if="card.seen">{{card.url}}</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="columns is-centered"id="misc">
+        <div class="columns is-centered "id="misc">
           <div class="column" v-for="tab in tabs">
-            <div class = "card" v-on:click="expand(tab)">
+            <div class="card" v-on:click="expand(tab)">
             <div class="card-content">
               <p class="title">{{ tab.title }}</p>
               <div class="columns is-centered has-text-left" v-if="tab.seen == 1">
@@ -58,8 +59,12 @@
 
       </div>
     </section>
-
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="index.js"></script>
+    <script src="click.js"></script>
   </body>
 </html>
