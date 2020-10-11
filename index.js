@@ -39,6 +39,7 @@ const miscCards = new Vue({
               "These forms are for use by the Product Owners only.",
               "Validation: Use the email that was sent to Peikai.",
               "Your questions will be directed to the appropriate modules.",
+              "For further clarifications, use the form and direct your question to: 'The Three Stooges'.",
             ],
           },
           {
