@@ -35,6 +35,7 @@ const miscCards = new Vue({
       {
         seen: 0,
         title: "How do I use these forms?",
+        tldr: "TL,DR: Use the forms, everyone gets free ice cream",
         points: [
           {
             title: "PSD TP Questions",
@@ -51,7 +52,6 @@ const miscCards = new Vue({
               "Fill up the form with your question(s) and module.",
               "Questions will be sent in batches to the lecturers by the Class Reps",
               "This ensures that everyone's question is seen, while reducing the load on the lecturers, allowing them to provide us with clearer responses.",
-              "TL,DR: Use the form, everyone gets free ice cream",
             ],
           },
         ],
@@ -59,6 +59,7 @@ const miscCards = new Vue({
       {
         seen: 0,
         title: "How should I ask questions?",
+        tldr: "TL,DR: Don't be a Karen/Ken",
         points: [
           {
             title: "Be courteous",

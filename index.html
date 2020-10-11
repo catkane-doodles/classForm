@@ -42,14 +42,16 @@
                 <div class="card-content">
                   <p class="title">{{ tab.title }}</p>
                   <div class="columns is-centered has-text-left" v-if="tab.seen == 1">
-                    <div class="column m-2">
+                    <div class="column m-2">           
+                      <div class="subtitle has-text-centered has-text-weight-semibold">{{tab.tldr}}</div>
+                      <hr>          
                       <ol>
                         <li v-for="point in tab.points" class="content"> {{point.title}} 
                           <ul>
                             <p v-for="line in point.content"> {{line}}</p>
                           </ul>
                         </li>
-                      </ol>
+                      </ol> 
                     </div>
                   </div>
                 </div>
