@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"
     />
-    <link rel="icon" type="ico" href="favicon.ico"/>
+    <link rel="icon" type="ico" href="favicon.ico" />
   </head>
   <body>
     <section class="hero is-warning is-fullheight">
@@ -16,63 +16,80 @@
         <div class="container has-text-centered">
           <div class="columns is-centered">
             <div class="column is-one-quarter">
-              <img
-                src="logo.png"
-                alt="Logo"
-              />
+              <img src="logo.png" alt="Logo" />
               <p class="subtitle">chill lah.</p>
             </div>
           </div>
 
           <div class="columns" id="cards">
-            <div class="column" v-for="card in cards">
-              <div class="card" v-on:click="goTo(card)">
+            <a class="column" :href="card.url" v-for="card in cards">
+              <div class="card">
                 <div class="card-content">
                   <p class="title">{{ card.title }}</p>
                   <p class="subtitle">{{ card.subtitle }}</p>
-                  <p class="url" v-if="card.seen">{{card.url}}</p>
                 </div>
               </div>
-            </div>
+            </a>
           </div>
 
-          <div class="columns is-centered "id="misc">
+          <div class="columns is-centered" id="misc">
             <div class="column" v-for="tab in tabs">
               <div class="card" v-on:click="expand(tab)">
                 <div class="card-content">
                   <p class="title">{{ tab.title }}</p>
-                  <div class="columns is-centered has-text-left" v-if="tab.seen == 1">
-                    <div class="column m-2">           
-                      <div class="subtitle has-text-centered has-text-weight-semibold">{{tab.tldr}}</div>
-                      <hr>          
+                  <div
+                    class="columns is-centered has-text-left"
+                    v-if="tab.seen == 1"
+                  >
+                    <div class="column m-2">
+                      <div
+                        class="subtitle has-text-centered has-text-weight-semibold"
+                      >
+                        {{tab.tldr}}
+                      </div>
+                      <hr />
                       <ol>
-                        <li v-for="point in tab.points" class="content"> {{point.title}} 
+                        <li v-for="point in tab.points" class="content">
+                          {{point.title}}
                           <ul>
-                            <p v-for="line in point.content"> {{line}}</p>
+                            <p v-for="line in point.content">{{line}}</p>
                           </ul>
                         </li>
-                      </ol> 
+                      </ol>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="columns" id="wiki">
+            <a class="column" :href="card.url" v-for="card in cards">
+              <div class="card">
+                <div class="card-content">
+                  <p class="title">{{ card.title }}</p>
+                  <p class="subtitle">{{ card.subtitle }}</p>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
       <div class="hero-foot">
         <div class="content has-text-centered">
           <p>
-            <strong>FreeDNS</strong> by <a href="https://freedns.afraid.org/">Josh</a>. The source code is licensed
+            <strong>FreeDNS</strong> by
+            <a href="https://freedns.afraid.org/">Josh</a>. The source code is
+            licensed
             <a href="https://opensource.org/licenses/gpl-2.0.php">GPL-2.0</a>.
           </p>
         </div>
       </div>
     </section>
     <script
-    src="https://code.jquery.com/jquery-3.5.1.js"
-    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="index.js"></script>
     <script src="click.js"></script>

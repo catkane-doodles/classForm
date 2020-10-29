@@ -16,16 +16,6 @@ const mainCards = new Vue({
       },
     ],
   },
-  methods: {
-    goTo: function (card) {
-      if (card.url == "#") {
-        window.alert("Not implemented yet!");
-      } else {
-        this.loading = true;
-        location.href = card.url;
-      }
-    },
-  },
 });
 
 const miscCards = new Vue({
@@ -108,5 +98,18 @@ const miscCards = new Vue({
     expand: function (tab) {
       tab.seen = (tab.seen + 1) % 2;
     },
+  },
+});
+
+const wikiCards = new Vue({
+  el: "#wiki",
+  data: {
+    cards: [
+      {
+        title: "Team Project Wiki",
+        subtitle: "Guidelines for a good experience",
+        url: "https://github.com/UGS-CS/SLS-M00-Core/wiki",
+      },
+    ],
   },
 });
